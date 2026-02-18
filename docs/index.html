@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SaiyanShield VPN — Quantum-Resistant AI-Driven Privacy</title>
 <meta name="description" content="SaiyanShield: Enterprise-grade quantum-resistant VPN with AI-driven threat detection. Your privacy, protected by Saiyan power.">
+<meta property="og:title" content="SaiyanShield VPN">
+<meta property="og:description" content="Quantum-Resistant AI-Driven VPN. Privacy is a right, not a privilege.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wimlee115.github.io/saiyanshield">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SaiyanShield VPN">
+<meta name="twitter:description" content="Quantum-Resistant AI-Driven VPN. Privacy is a right, not a privilege.">
+<meta name="theme-color" content="#0D0D1A">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -238,6 +247,7 @@ footer .heart{color:var(--alert)}
   <a href="#architecture" data-i18n="nav_arch">Architecture</a>
   <a href="#quickstart" data-i18n="nav_start">Quick Start</a>
   <a href="#stats" data-i18n="nav_stats">Stats</a>
+  <a href="#support" data-i18n="nav_support">Support</a>
   <a href="https://github.com/WimLee115/saiyanshield" data-i18n="nav_github">GitHub</a>
 </nav>
 
@@ -352,6 +362,23 @@ footer .heart{color:var(--alert)}
   </div>
 </section>
 
+<section id="screenshot">
+  <h2>// <span data-i18n="screen_title">VEGETA COMMAND CENTER</span></h2>
+  <div style="background:var(--bg2);border:1px solid rgba(10,132,255,0.15);border-radius:4px;padding:30px;text-align:center;">
+    <img src="assets/dashboard.png" alt="SaiyanShield Dashboard" style="width:100%;border-radius:4px;border:1px solid rgba(10,132,255,0.3);">
+    <p style="margin-top:12px;color:var(--dim);font-size:11px;" data-i18n="screen_desc">Real-time terminal-style dashboard with SSE metrics, health matrix, AI analyst, and privacy shield monitoring.</p>
+  </div>
+</section>
+
+<section id="support">
+  <h2>// <span data-i18n="support_title">SUPPORT THE MISSION</span></h2>
+  <div style="background:var(--bg2);border:1px solid rgba(255,215,0,0.2);border-radius:4px;padding:30px;text-align:center;">
+    <p style="color:var(--ssj-gold);font-size:16px;margin-bottom:12px;" data-i18n="support_heading">Privacy is een recht, geen privilege</p>
+    <p style="color:var(--dim);font-size:12px;line-height:1.8;max-width:600px;margin:0 auto 20px;" data-i18n="support_desc">SaiyanShield is gebouwd voor iedere burger die gelooft dat privacy een fundamenteel mensenrecht is. Dit project wordt onderhouden door een individu met passie. Jouw steun houdt de ontwikkeling draaiende.</p>
+    <a href="https://github.com/sponsors/WimLee115" class="cta-btn" data-i18n="support_btn">Sponsor on GitHub</a>
+  </div>
+</section>
+
 <div class="cta">
   <a href="https://github.com/WimLee115/saiyanshield" class="cta-btn" data-i18n="cta_github">View on GitHub</a>
   <a href="https://github.com/WimLee115/saiyanshield#-quick-start" class="cta-btn" data-i18n="cta_docs">Documentation</a>
@@ -369,7 +396,7 @@ footer .heart{color:var(--alert)}
 var LANG={
   en:{
     hero_sub:'Quantum-Resistant AI-Driven VPN',
-    nav_features:'Features',nav_arch:'Architecture',nav_start:'Quick Start',nav_stats:'Stats',nav_github:'GitHub',
+    nav_features:'Features',nav_arch:'Architecture',nav_start:'Quick Start',nav_stats:'Stats',nav_support:'Support',nav_github:'GitHub',
     feat_title:'POWER LEVEL: FEATURES',
     feat_pq_title:'Post-Quantum Crypto',feat_pq_desc:'ML-KEM-1024 + X25519 hybrid key exchange. ML-DSA-87 + Ed25519 signatures. Triple-layer encryption. Future-proof against quantum attacks.',
     feat_ai_title:'AI Threat Detection',feat_ai_desc:'20 health algorithms across 4 categories. Real-time anomaly detection, correlation engine, and automated investigation pipeline.',
@@ -381,11 +408,13 @@ var LANG={
     start_title:'POWER UP: QUICK START',
     stats_title:'POWER LEVEL READINGS',
     stat_crates:'Rust Crates',stat_tests:'Unit Tests',stat_algos:'Health Algorithms',stat_logs:'Logs Stored',stat_pq:'Post-Quantum Ready',stat_layers:'Encryption Layers',
-    cta_github:'View on GitHub',cta_docs:'Documentation'
+    cta_github:'View on GitHub',cta_docs:'Documentation',
+    screen_title:'VEGETA COMMAND CENTER',screen_desc:'Real-time terminal-style dashboard with SSE metrics, health matrix, AI analyst, and privacy shield monitoring.',screen_hint:'Screenshot coming soon — run the dashboard locally to see it in action.',
+    support_title:'SUPPORT THE MISSION',support_heading:'Privacy is a right, not a privilege',support_desc:'SaiyanShield is built for every citizen who believes privacy is a fundamental human right. This project is maintained by a passionate individual. Your support keeps the development going.',support_btn:'Sponsor on GitHub'
   },
   nl:{
     hero_sub:'Quantum-Bestendige AI-Gestuurde VPN',
-    nav_features:'Features',nav_arch:'Architectuur',nav_start:'Snel Starten',nav_stats:'Statistieken',nav_github:'GitHub',
+    nav_features:'Features',nav_arch:'Architectuur',nav_start:'Snel Starten',nav_stats:'Statistieken',nav_support:'Steun',nav_github:'GitHub',
     feat_title:'POWER LEVEL: FEATURES',
     feat_pq_title:'Post-Quantum Crypto',feat_pq_desc:'ML-KEM-1024 + X25519 hybride sleuteluitwisseling. ML-DSA-87 + Ed25519 handtekeningen. Drielaagse encryptie. Toekomstbestendig tegen quantum-aanvallen.',
     feat_ai_title:'AI Dreigingsdetectie',feat_ai_desc:'20 gezondheidsalgoritmes in 4 categorieën. Realtime anomaliedetectie, correlatie-engine en geautomatiseerde onderzoekspipeline.',
@@ -397,7 +426,9 @@ var LANG={
     start_title:'OPSTARTEN: SNEL BEGINNEN',
     stats_title:'POWER LEVEL METINGEN',
     stat_crates:'Rust Crates',stat_tests:'Unit Tests',stat_algos:'Gezondheidsalgoritmes',stat_logs:'Logboeken Opgeslagen',stat_pq:'Post-Quantum Gereed',stat_layers:'Encryptielagen',
-    cta_github:'Bekijk op GitHub',cta_docs:'Documentatie'
+    cta_github:'Bekijk op GitHub',cta_docs:'Documentatie',
+    screen_title:'VEGETA COMMANDOCENTRUM',screen_desc:'Realtime terminal-stijl dashboard met SSE metrics, gezondheidsmatrix, AI analist en privacy schild monitoring.',screen_hint:'Screenshot komt binnenkort — start het dashboard lokaal om het in actie te zien.',
+    support_title:'STEUN DE MISSIE',support_heading:'Privacy is een recht, geen privilege',support_desc:'SaiyanShield is gebouwd voor iedere burger die gelooft dat privacy een fundamenteel mensenrecht is. Dit project wordt onderhouden door een individu met passie. Jouw steun houdt de ontwikkeling draaiende.',support_btn:'Sponsor op GitHub'
   }
 };
 var currentLang=localStorage.getItem('saiyanshield_lang')||'en';

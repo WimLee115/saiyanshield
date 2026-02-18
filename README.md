@@ -280,6 +280,8 @@ Autonome investigatie-engine geinspireerd door Darktrace:
 
 Dragon Ball Z-thema web dashboard op `http://localhost:3000`:
 
+![SaiyanShield Dashboard](docs/assets/dashboard.png)
+
 - **Saiyan kleurenschema** — Blauw (#0A84FF), Goud (#FFD700), Oranje aura (#FF6B00)
 - **Theme switcher** — Saiyan Mode / Stealth Mode / Super Saiyan Mode
 - **Tweetalig** — Volledige Engels/Nederlands taalwisselaar
