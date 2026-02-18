@@ -1,5 +1,10 @@
 # WimVPN
 
+[![GitHub stars](https://img.shields.io/github/stars/WimLee115/wimvpn?style=social)](https://github.com/WimLee115/wimvpn/stargazers)
+[![CI](https://github.com/WimLee115/wimvpn-dev/actions/workflows/ci.yml/badge.svg)](https://github.com/WimLee115/wimvpn-dev/actions)
+[![Rust](https://img.shields.io/badge/rust-edition%202024-orange)](https://www.rust-lang.org/)
+[![License](https://img.shields.io/badge/license-Proprietary-blue)](#licentie)
+
 ```
         ░░░░░░░
       ░░░░░░░░░░░
@@ -16,7 +21,9 @@
 
 **Next-Generation Post-Quantum VPN Platform**
 
-WimVPN is een VPN-platform volledig gebouwd in Rust met Python AI/ML modellen. Het combineert post-quantum cryptografie, drielaagse symmetrische encryptie, 20 real-time health monitoring algoritmen, een autonome AI Analyst engine en een terminal-stijl Matrix/Aladdin dashboard — in een enkele statisch gelinkte binary.
+WimVPN is een VPN-platform volledig gebouwd in Rust met Python AI/ML modellen. Het combineert post-quantum cryptografie, drielaagse symmetrische encryptie, geïntegreerde traffic obfuscation met decoy verkeer, multi-adapter bonding, 20 real-time health monitoring algoritmen, een autonome AI Analyst engine en een terminal-stijl Matrix/Aladdin dashboard — in een enkele statisch gelinkte binary.
+
+> Als je dit project interessant vindt, geef dan een ster! Het helpt het project zichtbaar te maken.
 
 **Copyright (c) 2026 WimLee115. Alle rechten voorbehouden.**
 
@@ -26,10 +33,12 @@ WimVPN is een VPN-platform volledig gebouwd in Rust met Python AI/ML modellen. H
 
 | Statistiek | Waarde |
 |------------|--------|
-| Rust codebase | 25.100+ regels |
+| Rust codebase | 28.100+ regels |
 | Python AI/ML | 2.700+ regels |
 | Workspace crates | 14 Rust + 1 Python |
-| Tests | 178 (alle groen) |
+| Tests | 250+ (alle groen) |
+| Benchmarks | 6 suites (Criterion) |
+| Fuzz targets | 6 (libfuzzer) |
 | Health algoritmen | 20 (4 categorieën) |
 | AI correlatie-regels | 8 |
 | Threat categorieën | 13 |
@@ -49,6 +58,8 @@ Een aanvaller moet **beide** schema's breken:
 - **ML-KEM-1024 (Kyber)** — FIPS 203 quantum-safe key encapsulation
 - **X25519** — Klassiek ECDH als defense-in-depth
 - **HKDF-SHA-512** — Domein-gescheiden sleutelafleiding per encryptielaag
+- **AEAD-encrypted static key** — Initiator's publieke sleutel versleuteld met KEM shared secret in handshake
+- **Directionele sessiesleutels** — Gescheiden send/recv cipher per rol (initiator/responder)
 
 ### Hybride Authenticatie
 
@@ -146,15 +157,17 @@ Autonome investigatie-engine geïnspireerd op Darktrace:
 
 ## Traffic Obfuscation
 
+Volledig geïntegreerd in client en server — alle VPN-pakketten worden automatisch verpakt en uitgepakt op basis van de geconfigureerde stealth modus.
+
 | Feature | Beschrijving |
 |---------|-------------|
-| HTTPS vermomming | VPN-verkeer verpakt als HTTPS |
-| WebSocket vermomming | Verkeer via WebSocket frames |
+| HTTPS vermomming | VPN-verkeer verpakt als TLS 1.3 Application Data records |
+| WebSocket vermomming | Verkeer via WebSocket binary frames met masking |
 | DNS-over-HTTPS | Verkeer vermomd als DoH queries |
 | Domain fronting | TLS ClientHello SNI-manipulatie via CDN front-domeinen |
-| Dekverkeer | Willekeurig dekverkeer maskeert patronen |
+| Dekverkeer | Poisson-verdeeld dekverkeer via `DecoyGenerator` (configureerbaar interval) |
 | Timing verdediging | Constant-time padding tegen analyse |
-| Pakketpadding | Uniforme pakketgrootte |
+| Pakketpadding | Uniforme pakketgrootte (256/512/1024/1500) |
 
 ### Domain Fronting
 
@@ -224,9 +237,9 @@ Kleurenschema: matrix green (#00ff41), gold accents (#d4af37), threat red op zwa
 
 | Crate | Beschrijving |
 |-------|-------------|
-| `wimvpn-core` | Orchestrator: VPN engine, state machine, kill switch, DNS, split tunneling, metrics collector |
-| `wimvpn-crypto` | Post-quantum: ML-KEM-1024 + X25519, ML-DSA-87 + Ed25519, triple-layer encryptie, signed updates |
-| `wimvpn-protocol` | Wire protocol: PQ handshake, session management, key rotation, anti-replay |
+| `wimvpn-core` | Orchestrator: VPN engine, state machine, kill switch, DNS, split tunneling, metrics collector, key persistence |
+| `wimvpn-crypto` | Post-quantum: ML-KEM-1024 + X25519, ML-DSA-87 + Ed25519, triple-layer encryptie, AEAD helpers, signed updates |
+| `wimvpn-protocol` | Wire protocol: PQ handshake met encrypted static key, directional sessions, key rotation, anti-replay |
 | `wimvpn-tunnel` | TUN device: async I/O via tokio, gateway management |
 | `wimvpn-adapter` | Multi-adapter bonding: failover, round robin, weighted, aggregate |
 | `wimvpn-stealth` | Obfuscatie: HTTPS/WebSocket/DoH vermomming, domain fronting met SNI-manipulatie, dekverkeer |
@@ -245,7 +258,7 @@ Kleurenschema: matrix green (#00ff41), gold accents (#d4af37), threat red op zwa
 
 ### Vereisten
 
-- Rust 1.75+ (2021 edition)
+- Rust 1.85+ (2024 edition)
 - C compiler (voor pqcrypto native libraries)
 - Linux (kernel 3.x+ voor TUN ondersteuning)
 - Root rechten (sudo) voor TUN device, iptables en route configuratie
@@ -343,6 +356,10 @@ Fail-closed firewall via dedicated `WIMVPN_KILLSWITCH` iptables chain:
 |-----------|--------------|
 | Post-quantum hybride | ML-KEM-1024 + X25519, ML-DSA-87 + Ed25519 |
 | Triple-layer encryptie | 3 onafhankelijke ciphers, apart afgeleide sleutels |
+| Directionele sleutelisolatie | Gescheiden send/recv ciphers per sessierol |
+| AEAD-encrypted handshake | Static public key versleuteld met KEM shared secret |
+| Versleutelde sessiebevestiging | Session confirmation via sessie-cipher, niet plaintext |
+| Persistente identiteitssleutels | Server/client sleutels opgeslagen op schijf (0600 permissies) |
 | Constant-time crypto | `subtle` crate voor alle vergelijkingen |
 | Anti-replay | Sliding window bitmap op inkomende packets |
 | Bron-adres validatie | Server valideert packets van verwacht IP |
@@ -350,7 +367,59 @@ Fail-closed firewall via dedicated `WIMVPN_KILLSWITCH` iptables chain:
 | Sleutelrotatie | Automatisch elke 60 seconden |
 | Zeroization | Alle geheime sleutels via `Zeroize` trait |
 | Security headers | CSP, X-Frame-Options, XCTO, Referrer-Policy |
+| Forward secrecy | Key rotation ratchet vernietigt oude sleutels (bewezen met tests) |
+| Config validatie | Startup-validatie van alle configuratievelden |
 | 5-laags watermerk | Compile-time, runtime, steganografie, signatures, protocol |
+
+---
+
+## Benchmarks
+
+Performance benchmarks via [Criterion.rs](https://github.com/bheisler/criterion.rs) in 6 suites:
+
+| Suite | Wat wordt gemeten |
+|-------|-------------------|
+| `crypto_bench` | KEM keypair/encap/decap, triple-layer encrypt/decrypt, packet serialisatie |
+| `protocol_bench` | Handshake roundtrip, session encrypt/decrypt (100B–10KB), multi-hop circuit build, onion encrypt |
+| `signing_bench` | HybridSigner keypair generatie, sign (32B/1KB), verify |
+| `health_bench` | Alle 20 health algoritmen, per categorie (Network/Security/Performance/AiMl) |
+| `analyst_bench` | AnalystEngine ingest: gezonde batch, attack batch |
+| `stealth_bench` | Domain fronting SNI-vervanging, watermark verificatie |
+
+```bash
+cargo bench                        # Alle benchmarks
+cargo bench --bench crypto_bench   # Enkele suite
+```
+
+---
+
+## Multi-Adapter Bonding
+
+Optionele multi-adapter ondersteuning voor redundantie en bandbreedte-aggregatie:
+
+| Strategie | Beschrijving |
+|-----------|-------------|
+| Failover | Automatische overschakeling bij adapter-falen |
+| Round Robin | Pakketten verdeeld over actieve adapters |
+| Weighted | Selectie op basis van kwaliteitsscore (latency + packet loss) |
+| Aggregate | Alle adapters tegelijk voor maximale doorvoer |
+
+- **Auto-detectie** van WiFi-adapters via `/sys/class/net`
+- **Health monitoring** met configureerbare thresholds (latency, packet loss)
+- **SO_BINDTODEVICE** binding voor source-gebaseerde routing
+- **Configureerbaar** via `[adapters]` sectie in config
+
+---
+
+## Sleutelbeheer
+
+Persistente identiteitssleutels voor server en client:
+
+- **Automatisch genereren** — Sleutels worden gegenereerd bij eerste opstart als ze niet bestaan
+- **Veilige opslag** — Bestanden met `0600` permissies (alleen eigenaar)
+- **Server**: KEM + signing keypairs in `/etc/wimvpn/keys/`
+- **Client**: KEM + signing keypairs in `/etc/wimvpn/client-keys/`
+- **Server public key distributie** — Client laadt server public key via `server_public_key_path` config
 
 ---
 
