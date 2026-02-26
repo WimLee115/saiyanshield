@@ -1,14 +1,18 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/%E2%9A%A1-SAIYANSHIELD-0A84FF?style=for-the-badge&labelColor=0D0D1A" alt="SaiyanShield" />
-</p>
+<div align="center">
 
-<p align="center">
-  <a href="https://github.com/WimLee115/saiyanshield/stargazers"><img src="https://img.shields.io/github/stars/WimLee115/saiyanshield?style=for-the-badge&color=FFD700&labelColor=0D0D1A&logo=github" alt="Stars" /></a>
-  <a href="https://github.com/WimLee115/saiyanshield-dev/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/WimLee115/saiyanshield-dev/ci.yml?style=for-the-badge&label=CI&labelColor=0D0D1A&color=0A84FF" alt="CI" /></a>
-  <a href="#"><img src="https://img.shields.io/badge/Rust-Edition%202024-FF6B00?style=for-the-badge&logo=rust&labelColor=0D0D1A" alt="Rust" /></a>
-  <a href="#"><img src="https://img.shields.io/badge/Python-3.12%2B-FFD700?style=for-the-badge&logo=python&labelColor=0D0D1A" alt="Python" /></a>
-  <a href="#-steun-dit-project"><img src="https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F-Steun%20Dit%20Project-FF2D55?style=for-the-badge&labelColor=0D0D1A" alt="Support" /></a>
-</p>
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0A84FF&height=300&section=header&text=SaiyanShield&fontSize=80&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=%E2%9A%A1%20Quantum-Resistant%20AI-Driven%20VPN%20%E2%80%A2%20Saiyan%20Power&descSize=18&descAlignY=55&descColor=FFD700" width="100%" />
+
+<br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=28&duration=3000&pause=1000&color=0A84FF&center=true&vCenter=true&multiline=true&repeat=true&width=800&height=160&lines=Post-Quantum+Cryptography+%2B+Triple-Layer+Encryption;20+Scouter+Health+Algorithms+%2B+8+ML+Models;14+Rust+Crates+%2B+30%2C000%2B+Lines+of+Code;Privacy+is+not+a+privilege.+It+is+a+right." alt="Typing SVG" />
+
+<br/>
+
+<a href="https://github.com/WimLee115/saiyanshield/stargazers"><img src="https://img.shields.io/github/stars/WimLee115/saiyanshield?style=for-the-badge&color=FFD700&labelColor=0D0D1A&logo=github" alt="Stars" /></a>
+<a href="https://github.com/WimLee115/saiyanshield-dev/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/WimLee115/saiyanshield-dev/ci.yml?style=for-the-badge&label=CI&labelColor=0D0D1A&color=0A84FF" alt="CI" /></a>
+<a href="#"><img src="https://img.shields.io/badge/Rust-Edition%202024-FF6B00?style=for-the-badge&logo=rust&labelColor=0D0D1A" alt="Rust" /></a>
+<a href="#"><img src="https://img.shields.io/badge/Python-3.12%2B-FFD700?style=for-the-badge&logo=python&labelColor=0D0D1A" alt="Python" /></a>
+<a href="#-steun-dit-project"><img src="https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F-Steun%20Dit%20Project-FF2D55?style=for-the-badge&labelColor=0D0D1A" alt="Support" /></a>
 
 <br/>
 
@@ -26,17 +30,17 @@
                            ⚡ Quantum-Resistant AI-Driven VPN ⚡
 ```
 
-<p align="center">
-  <strong>Bescherming die je verdient. Privacy die je recht is.</strong>
-</p>
+<strong>Bescherming die je verdient. Privacy die je recht is.</strong>
 
-<p align="center">
-  <em>"Mijn Saiyan-trots laat me niet verliezen!" — Vegeta</em>
-</p>
-
----
+<em>"Mijn Saiyan-trots laat me niet verliezen!" — Vegeta</em>
 
 <br/>
+
+<img src="https://skillicons.dev/icons?i=rust,python,linux,docker,bash&perline=8" />
+
+</div>
+
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%" >
 
 ## Waarom SaiyanShield?
 
@@ -48,9 +52,7 @@ SaiyanShield is niet gebouwd voor multinationals of geheime diensten. Het is geb
 
 Dit project is gemaakt met **liefde en toewijding** door een onafhankelijke ontwikkelaar. Elke regel code is geschreven met de overtuiging dat technologie de mens moet beschermen, niet in de gaten houden.
 
-<br/>
-
----
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%" >
 
 ## Wat maakt SaiyanShield anders?
 
@@ -99,9 +101,7 @@ Volledig gebouwd in Rust en Python. Elke component is auditeerbaar, elke besliss
 </tr>
 </table>
 
-<br/>
-
----
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%" >
 
 ## Overzicht
 
@@ -122,9 +122,7 @@ Volledig gebouwd in Rust en Python. Elke component is auditeerbaar, elke besliss
 <tr><td><strong>Watermerklagen</strong></td><td>5</td></tr>
 </table>
 
-<br/>
-
----
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%" >
 
 ## Post-Quantum Cryptografie
 
@@ -160,9 +158,7 @@ Elk datapakket passeert drie onafhankelijke ciphers in serie:
 
 > Overhead per pakket: 96 bytes (48 bytes nonces + 48 bytes authenticatie-tags)
 
-<br/>
-
----
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%" >
 
 ## 20 Scouter Health Algoritmen
 
@@ -222,9 +218,7 @@ Real-time gezondheidsmonitoring over 4 categorieen. Alle algoritmen gebruiken ec
 
 </details>
 
-<br/>
-
----
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%" >
 
 ## AI Analyst Engine
 
@@ -252,9 +246,7 @@ Autonome investigatie-engine geinspireerd door Darktrace:
 | RouteOptimizerRL | Reinforcement Learning | Route optimalisatie |
 | CongestionPredictor | GRU | Congestie voorspelling |
 
-<br/>
-
----
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%" >
 
 ## Ki-Onderdrukking — Traffic Obfuscation
 
@@ -270,9 +262,7 @@ Autonome investigatie-engine geinspireerd door Darktrace:
 | Timing verdediging | Constant-time padding tegen analyse |
 | Pakketpadding | Uniforme pakketgrootte (256/512/1024/1500) |
 
-<br/>
-
----
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%" >
 
 ## Vegeta Command Dashboard
 
@@ -293,9 +283,7 @@ Dragon Ball Z-thema web dashboard op `http://localhost:3000`:
 - **SSE streaming** — Real-time updates via Server-Sent Events
 - **Sessie-beveiliging** — Token verloopt automatisch bij sluiten browser
 
-<br/>
-
----
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%" >
 
 ## Architectuur
 
@@ -345,9 +333,7 @@ Dragon Ball Z-thema web dashboard op `http://localhost:3000`:
 | `saiyanshield-server` | Server binary: multi-client, TUN + NAT, per-client IP allocatie |
 | `saiyanshield-ai` | Python: 8 ML modellen (GAT, Transformer, MLP, LSTM, GRU, CNN, RL, Autoencoder) |
 
-<br/>
-
----
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%" >
 
 ## Snel Starten
 
@@ -395,9 +381,7 @@ open http://localhost:3000
 ./scripts/stop.sh
 ```
 
-<br/>
-
----
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%" >
 
 ## Kill Switch — Saiyan Barrier
 
@@ -410,9 +394,7 @@ Fail-closed firewall via dedicated iptables chains:
 - Automatische opruiming bij afsluiting (ook via `Drop` trait)
 - Retry logica: 3 pogingen + emergency flush
 
-<br/>
-
----
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%" >
 
 ## Beveiligingsmodel
 
@@ -431,9 +413,7 @@ Fail-closed firewall via dedicated iptables chains:
 | Security headers | CSP, X-Frame-Options, XCTO, Referrer-Policy |
 | 5-laags watermerk | Compile-time, runtime, steganografie, signatures, protocol |
 
-<br/>
-
----
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%" >
 
 ## Dashboard API
 
@@ -453,9 +433,7 @@ Fail-closed firewall via dedicated iptables chains:
 | GET | `/api/analyst/investigations` | Investigations (filter/paginatie) |
 | GET | `/api/analyst/active` | Actieve investigations |
 
-<br/>
-
----
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%" >
 
 ## Benchmarks
 
@@ -473,9 +451,7 @@ cargo bench                       # Alle benchmarks
 cargo bench --bench crypto_bench  # Enkele suite
 ```
 
-<br/>
-
----
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%" >
 
 <h2 id="-steun-dit-project">Steun Dit Project</h2>
 
@@ -503,28 +479,43 @@ Het onderhouden en doorontwikkelen van een project van deze omvang — 30.000+ r
 
 > Geen geld? Geen probleem. Een ster op GitHub, een retweet, of het vertellen aan een vriend die om privacy geeft — het maakt allemaal verschil. Samen bouwen we een veiliger internet.
 
-<br/>
-
----
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%" >
 
 ## Licentie
 
 **Copyright (c) 2026 WimLee115. Alle rechten voorbehouden.**
 
----
+<img src="https://i.imgur.com/dBaSKWF.gif" height="20" width="100%" >
 
-<p align="center">
-  <br/>
-  <strong>Gemaakt met liefde en toewijding door <a href="https://github.com/WimLee115">WimLee115</a></strong>
-  <br/>
-  <br/>
-  <em>Voor iedere burger die privacy een belangrijk recht vindt.</em>
-  <br/>
-  <em>Niet alleen voor de grote machten — maar voor ons allemaal.</em>
-  <br/>
-  <br/>
-  <em>"Kakarot... Ik zal je overtreffen!"</em> — Vegeta
-  <br/>
-  <br/>
-  <img src="https://img.shields.io/badge/Power%20Level-OVER%209000-FFD700?style=flat-square&labelColor=0D0D1A" alt="Power Level" />
-</p>
+<div align="center">
+
+<br/>
+
+<strong>Gemaakt met liefde en toewijding door <a href="https://github.com/WimLee115">WimLee115</a></strong>
+
+<br/>
+
+<em>Voor iedere burger die privacy een belangrijk recht vindt.</em>
+<br/>
+<em>Niet alleen voor de grote machten — maar voor ons allemaal.</em>
+
+<br/>
+
+<em>"Kakarot... Ik zal je overtreffen!"</em> — Vegeta
+
+<br/>
+
+[![Built By](https://img.shields.io/badge/Built%20by-WimLee115-0A84FF?style=for-the-badge&logo=github&logoColor=white)](https://github.com/WimLee115)
+[![Solo Engineer](https://img.shields.io/badge/Solo-Engineer-FFD700?style=for-the-badge&logo=openbadges&logoColor=white)](#)
+[![Made with Rust](https://img.shields.io/badge/Made%20with-Rust-FF6B00?style=for-the-badge&logo=rust&logoColor=white)](https://www.rust-lang.org)
+[![Power Level](https://img.shields.io/badge/Power%20Level-OVER%209000-FFD700?style=for-the-badge&labelColor=0D0D1A)](#)
+
+<br/>
+
+Contact: [ai-idle@outlook.com](mailto:ai-idle@outlook.com)
+
+<br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0A84FF&height=120&section=footer" width="100%" />
+
+</div>
